@@ -1,0 +1,22 @@
+//Java program to convert from decimal to binary
+public class HelloWorld{
+     public static void convertToBinary(int num) {
+         System.out.println("Binary Formate of "+num+" is:");
+         if(num == 0)
+            System.out.println("0");
+        else{
+            int[] binary = new int[(int)Math.ceil(Math.sqrt(num))];
+            int i=0;
+            while(num!=0){
+                 binary[i++] = num%2;
+                 num/=2;
+            }
+            for(i=binary.length-1; i>=0; i--)
+               System.out.print(binary[i]+" ");
+        }
+     }
+     public static void main(String []args){
+        int num = 20;
+        convertToBinary(num);
+     }
+}
