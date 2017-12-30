@@ -1,0 +1,38 @@
+
+//Java Program for finding if any number is cyclically Permuted Prime
+public class HelloWorld{
+     public static boolean primeNumber(int num) {
+         for(int i=2; i<num/2; i++)
+            if(num % i == 0)
+                return false;
+            else
+                return true;
+        return true;
+     }
+     public static int rotate(int num) {
+         String s1 = Integer.toString(num);
+         String temp = s1.substring(1)+s1.charAt(0);
+         int n = Integer.parseInt(temp);
+         return n;
+     }
+     public static boolean circularPrime(int num) {
+         int temp = num;
+         if(!primeNumber(num))
+            return false;
+        else {
+            do {
+                temp = rotate(num);
+                if(!primeNumber(temp))
+                    return false;
+            }while(temp!=num);
+        }
+        return true;
+     }
+     public static void main(String []args){
+        int num = 1193;
+        if(!circularPrime(num))
+            System.out.println(num+" is not a circular prime number");
+        else
+            System.out.println(num+" is a circular prime number");
+     }
+}
