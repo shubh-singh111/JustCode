@@ -1,0 +1,17 @@
+//Program to find out the number of letters in a string
+public class MyClass {
+    public static int letterCount(String str) {
+        int letters = 0;
+        int i = 0;
+        while(i < str.length()) {
+            if(str.charAt(i) != ' ')
+                letters++;
+            i++;
+        }
+        return letters;
+    }
+    public static void main(String args[]) {
+        String str = "Sushila Devi Bansal College of Technology";
+        System.out.println("Number of letter in string is "+letterCount(str));
+    }
+}
