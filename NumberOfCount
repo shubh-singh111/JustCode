@@ -1,0 +1,40 @@
+// Program to find out the number of count of given character in a string
+/* 
+public class MyClass {
+    public static int findCountOfOccurence(char c, String givenStr) {
+        int count = 0;
+        int i = 0;
+        while(i < givenStr.length()) {
+            if(givenStr.charAt(i) == c)
+                count++;
+            i++;
+        }
+        return count;
+    }
+    public static void main(String args[]) {
+        char s = 's';
+        String givenStr="Shubham Singh";
+        int result = findCountOfOccurence(s,givenStr);
+        System.out.println(s+" came "+result+" times in the string");
+    }
+}
+
+*/
+//Another tricky way to do the same
+public class MyClass {
+    public static int findCountOfOccurence(char c, String givenStr) {
+        int count = 0;
+        while(givenStr.indexOf(c) >= 0) {
+            count++;
+            givenStr = givenStr.substring(givenStr.indexOf(c)+1);
+        }
+        return count;
+    }
+    public static void main(String args[]) {
+        char s = 'h';
+        String givenStr="Shubham Singh";
+        int result = findCountOfOccurence(s,givenStr);
+        System.out.println(s+" came "+result+" times in the string");
+    }
+}
+
