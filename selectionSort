@@ -1,0 +1,21 @@
+//Program to sort the elements using selection sort (n^2)
+public class MyClass {
+    public static void selectionSort(int array[]) {
+        for(int i=0; i<array.length-1; i++) {
+            int index = i;
+            for(int j=i+1; j<array.length; j++)
+                if(array[j] < array[index])
+                    index = j;
+            int min = array[index];
+            array[index] = array[i];
+            array[i] = min;
+        }
+    }
+    public static void main(String args[]) {
+        int[] array = new int[]{5,4,3,2,1};
+        selectionSort(array);
+        System.out.println("Sorted Array:");
+        for(int var:array)
+            System.out.print(var+" ");
+    }
+}
