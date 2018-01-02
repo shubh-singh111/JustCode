@@ -1,0 +1,37 @@
+import java.util.*;
+public class MyClass {
+    public static void main(String args[]) {
+        // Work on Dictionary
+        Map<String, String> englHindi = new HashMap<String, String>();// Declaration of Dictionary
+        // Putting stuffs into Dictionary
+        englHindi.put("Monday","Somwar");
+        englHindi.put("Tuesday","Mangalwar");
+        englHindi.put("Wednesday","Budhwar");
+        englHindi.put("Thursday","Guruwar");
+        // Getting stuffs from the dictionary
+        System.out.println(englHindi.get("Monday"));
+        System.out.println(englHindi.get("Tuesday"));
+        System.out.println(englHindi.get("Wednesday"));
+        System.out.println(englHindi.get("Thursday"));
+        // Getting All set of keys in one line
+        System.out.println(englHindi.keySet());
+        // Getting All set of stuffs in one line
+        System.out.println(englHindi.values());
+        // Getting Size of the Dictionary
+        System.out.println(englHindi.size());
+        // Getting key = value pair
+        System.out.println(englHindi.toString());
+        // For checking if our Dictionary is empty
+        System.out.println(englHindi.isEmpty());
+        // For Removing any Item(Key-value)
+        englHindi.remove("Monday");
+        System.out.println(englHindi.values()+" Monday has been removed");
+        // For Replacing any Item(key-value)
+        englHindi.replace("Tuesday","tuesday");
+        System.out.println(englHindi.values());
+        // For clearing the Dictionary
+        englHindi.clear();
+        System.out.println(englHindi.values());
+        
+    }
+}
